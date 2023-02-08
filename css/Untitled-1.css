@@ -94,7 +94,7 @@ a{
 
 .page .steps-side ul li.active .num{
     background-color: var(--Light-blue);
-    color: black;
+    color: var(--Marine-blue);
     border: none;
 }
 
