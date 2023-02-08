@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>zomboww</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/Untitled-1.css">
+</head>
+<body>
+    <div class="container">
+        <div class="page">
+            <div class="steps-side">
+                <ul>
+                    <li class="steps active" id="steps">
+                        <div class="num">1</div>
+                        <div class="step">
+                            <p>step 1</p>
+                            <h2>your info</h2>
+                        </div>
+                    </li>
+                    <li class="steps" id="steps">
+                        <div class="num">2</div>
+                        <div class="step">
+                            <p>step 2</p>
+                            <h2>select plan</h2>
+                        </div>
+                    </li>
+                    <li class="steps" id="steps">
+                        <div class="num">3</div>
+                        <div class="step">
+                            <p>step 3</p>
+                            <h2>add-ons</h2>
+                        </div>
+                    </li>
+                    <li class="steps" id="steps">
+                        <div class="num">4</div>
+                        <div class="step">
+                            <p>step 4</p>
+                            <h2>summary</h2>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="content-side personal-info">
+                <div class="head">
+                    <h2>Personal info</h2>
+                    <p>please provide your name,email address, and phone number.</p>
+                </div>
+                <form action="">
+                    <div>
+                        <label for="name">Name</label>
+                        <input type="text" id="name" placeholder="e.g.Stephen king" required>
+                    </div>
+                    <div>
+                        <label for="mail">Email Address</label>
+                        <input type="text" id="mail" placeholder="e.g.Stephen king@lorem.com" required>
+                    </div>
+                    <div>
+                        <label for="ph-num">Phone Number</label>
+                        <input type="text" id="ph-num" placeholder="e.g.+1 234 567 890" required>
+                    </div>
+                </form>
+                <button class="next-step" onclick="plusSlides(1)">Next Step</button>
+            </div>
+            <div class="content-side select-plan">
+                <div class="head">
+                    <h2>Select plan</h2>
+                    <p>you havethe option of monthly or yearly billing</p>
+                </div>
+                <div class="content">
+                    <div class="plans">
+                        <div class="box plan selected" id="Arcade" onclick="chose_plan(1)">
+                            <div class="image">
+                                <img src="images/icon-arcade.svg" alt="">
+                            </div>
+                            <h2>Arcade</h2>
+                            <div class="price">
+                                <div class="monthly">
+                                    <p>$9/mo</p>
+                                </div>
+                                <div class="yearly" style="display: none;">
+                                    <p>$90/yr</p>
+                                    <span>2 months free</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box plan" id="Advanced" onclick="chose_plan(2)">
+                            <div class="image">
+                                <img src="images/icon-advanced.svg" alt="">
+                            </div>
+                            <h2>Advanced</h2>
+                            <div class="price">
+                                <div class="monthly">
+                                    <p>$12/mo</p>
+                                </div>
+                                <div class="yearly" style="display: none;">
+                                    <p>$120/yr</p>
+                                    <span>2 months free</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box plan" id="Pro" onclick="chose_plan(3)">
+                            <div class="image">
+                                <img src="images/icon-pro.svg" alt="">
+                            </div>
+                            <h2>Pro</h2>
+                            <div class="price">
+                                <div class="monthly">
+                                    <p>$15/mo</p>
+                                </div>
+                                <div class="yearly" style="display: none;">
+                                    <p>$150/yr</p>
+                                    <span>2 months free</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="plan-duration">
+                        <span class="active">monthly</span>
+                        <div class="button" onclick="change_duration()"><div class="cyrcle"></div></div>
+                        <span>yearly</span>
+                    </div>
+                </div>
+                <button class="go-back" onclick="plusSlides(-1)">Go back</button>
+                <button class="next-step" onclick="plusSlides(1)">Next Step</button>
+            </div>
+            <div class="content-side Pick-add-ons">
+                <div class="head">
+                    <h2>Pick add-ons</h2>
+                    <p>add-ons help enhance your gaming experience.</p>
+                </div>
+                <div class="add-ons">
+                    <div class="box">
+                        <div class="about-ons" >
+                            <input type="checkbox" name="online-service" id="online-service">
+                            <div class="content">
+                                <h3>Online service</h3>
+                                <p>Access to multiplayer games</p>
+                            </div>
+                        </div>
+                        <div class="price">
+                            +$1/mo
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="about-ons">
+                            <input type="checkbox" name="larger-storage" id="larger-storage">
+                            <div class="content">
+                                <h3>Larger storage</h3>
+                                <p>Extra 1TB of cloud save</p>
+                            </div>
+                        </div>
+                        <div class="price">
+                            +$2/mo
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="about-ons">
+                            <input type="checkbox" name="Customizable-Profile" id="Customizable-Profile">
+                            <div class="content">
+                                <h3>Customizable Profile</h3>
+                                <p>Custom theme on your profile </p>
+                            </div>
+                        </div>
+                        <div class="price">
+                            +$2/mo
+                        </div>
+                    </div>
+                </div>
+
+                <button class="go-back" onclick="plusSlides(-1)">Go back</button>
+                <button class="next-step" onclick="plusSlides(1)">Next Step</button>
+            </div>
+            <div class="content-side finishing-up">
+                <div class="head">
+                    <h2>Finishing up</h2>
+                    <p>Double-check everything looks OK before confirming</p>
+                </div>
+                <div class="confermation">
+                    <div class="plan">
+                        <div class="type">
+                            <h2>Arcade&#40;Yearly&#41;</h2>
+                            <a onclick="plusSlides(-2)">Change</a>
+                        </div>
+                        <div class="price">$90/yr</div>
+                    </div>
+                    <div class="ons">
+                        <div>
+                            <div class="type">Online service</div>
+                            <div class="price">+$10/yr</div>
+                        </div>
+                        <div>
+                            <div class="type">Larger storage</div>
+                            <div class="price">+$20/yr</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="totale">
+                    <p>Total &#40;per yerar&#41;</p>
+                    <div class="price">$120/yr</div>
+                </div>
+
+                <button class="go-back" onclick="plusSlides(-1)">Go back</button>
+                <button class="next-step" onclick="plusSlides(1)" style="background-color: hsl(243, 100%, 62%);">confirm</button>
+            </div>
+            <div class="content-side thanks-page">
+                <div class="image">
+                    <img src="images/icon-thank-you.svg" alt="">
+                </div>
+                <h1>Thank you!</h1>
+                <p>Thanks for confirming your subscription! We hope you have fun using
+                    our platform. If you ever need support,please feel free ro email us 
+                    at support@loremgaming.com
+                </p>
+            </div>
+        </div>
+    </div>
+    <script src="js/js.js"></script>
+</body>
+</html>
